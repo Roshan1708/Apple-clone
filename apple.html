@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;
+    400;500;700&display=swap">
+    <title>Apple</title>
+    <style>
+        :root{
+        --greyDark: #333333;
+        --greyLight: #d6d6d6; 
+        --greyLight2: #a1a1a6;
+        --white:#f5f5f7;
+        --text: #1d1d1f;
+        --blue: #0071e3;
+        --a:#2997ff;
+       }
+    *{
+     padding: 0;
+     box-sizing: border-box;
+     margin: 0;
+    }
+    body {
+     font-family: "Roboto", sans-serif;
+     font-size: 14px;
+    }
+    a {
+  text-decoration: none;
+  font-weight: 300;
+    }
+    a:hover {
+  text-decoration: underline;
+    }
+    .black {
+    color: var(--text)
+    }
+    .dark-blue {
+    color: #06c
+    }
+    header {
+      width: 100%;
+      height: 45px;
+      background: rgba(0, 0, 0, 0.8);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      backdrop-filter: saturate(180%) blur(20px);
+    }
+    header ul {
+  height: 100%;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: var(--greyLight);
+}
+
+header ul li {
+  cursor: pointer;
+  list-style: none;
+}
+
+header ul li:hover {
+  color: #fff;
+}
+
+header ul li img {
+  width: 18px;
+  height: 18px;
+}
+
+.information {
+  height: 45px;
+  width: 100%;
+  background: var(--blue);
+  text-align: center;
+  line-height: 45px;
+  margin-top: 45px;
+}
+
+.information img {
+  width: 10px;
+}
+
+.information a {
+  color: #fff;
+}
+
+.information-2 {
+  background: #fff;
+  color: var(--text);
+  margin: 0;
+}
+
+.information-2 a {
+  color: var(--blue);
+}
+
+.top__title {
+  margin-top: 52px;
+  color: var(--white);
+  text-align: center;
+  z-index: 3;
+}
+
+.top__title h1 {
+  font-size: 52px;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+
+.top__title h3 {
+  margin-top: 3px;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.top__title h4 {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+  color: #d01f2a;
+}
+
+.top__title--links {
+  margin-top: 12px;
+}
+
+.top__title--links a {
+  font-size: 21px;
+  font-weight: 400;
+  color: var(--a);
+}
+
+.top__title--links a:nth-child(2) {
+  margin-left: 30px;
+}
+
+.top__title--links a img {
+  width: 12px;
+}
+
+.bottom__title {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 50px;
+  text-align: center;
+  z-index: 3;
+}
+
+.bottom__title h2 {
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 30px;
+  color: var(--greyLight2);
+}
+
+.bottom__title h2:nth-child(1) {
+  color: var(--white);
+  font-weight: 600;
+}
+
+.bottom__title h2:nth-child(4) {
+  margin-top: 20px;
+}
+    .background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.section1 {
+  height: 820px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.section1 .background {
+  top: -13%;
+}
+
+.section2 {
+  height: 950px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.section2 .background {
+  top: -13%;
+}
+
+.section3 {
+  width: 100%;
+  height: 690px;
+  overflow: hidden;
+  position: relative;
+  background: #000;
+}
+.section3 h1 {
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.section3 h1 img {
+  width: 38px;
+}
+
+.section3 .background {
+  width: 280px;
+  height: 450px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 1;
+}
+
+.section4 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+.section4 .row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.section4__item {
+  height: 590px;
+  -webkit-box-flex: 0.497;
+      -ms-flex: 0.497;
+          flex: 0.497;
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #fbfbfb;
+}
+
+.section4__item h1 {
+  font-size: 40px;
+}
+
+.section4__item h1 img {
+  width: 30px;
+}
+
+.section4__item h3 {
+  max-width: 298px;
+  font-size: 21px;
+  font-weight: 400;
+}
+
+.section4__item h4 {
+  font-size: 12px;
+  letter-spacing: normal;
+  margin-bottom: 0;
+}
+
+.section4__item a {
+  font-size: 17px;
+}
+
+.section4__item a img {
+  width: 10px;
+}
+
+.section4__item .background {
+  height: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 2;
+}
+
+.section4__item .homePod {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 50px;
+}
+
+.section4__item .one {
+  width: 550px;
+  height: 350px;
+}
+
+.section4__item .subTitle {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.section4__item .subTitle a {
+  height: 20px;
+  width: 110px;
+  margin: auto;
+  margin-top: 10px;
+  color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section4__item .subTitle a img {
+  width: 18px;
+  margin-left: 5px;
+}
+
+.footer {
+  width: 100%;
+  height: 810px;
+  background: var(--white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer__wrapper {
+  width: 970px;
+}
+
+.footer ul {
+  font-size: 12px;
+  list-style: none;
+  color: #86868b;
+  border-bottom: 1px solid var(--greyLight);
+}
+
+.footer ul li {
+  margin: 15px 0;
+  letter-spacing: 0.1px;
+}
+
+.footer__links {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__links--column {
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer__links--column-title {
+  font-weight: 400;
+  font-size: 12px;
+  margin-top: 18px;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+.footer__links--column a {
+  font-size: 12px;
+  color: #515154;
+  margin-bottom: 12px;
+}
+
+.footer__more {
+  font-size: 13px;
+  color: #86868b;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--greyLight);
+}
+
+.footer__more a {
+  color: #06c;
+}
+
+.footer__copyright {
+  width: 100%;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 13px;
+  color: #86868b;
+  margin-top: 4px;
+  position: relative;
+}
+
+.footer__copyright .links {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.footer__copyright .links a {
+  padding: 0 10px;
+  color: #515154;
+  border-left: 1px solid var(--greyLight);
+}
+
+.footer__copyright .links a:nth-child(1) {
+  border: none;
+}
+/*# sourceMappingURL=style.css.map */
+
+
+    
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><img src="https://th.bing.com/th/id/R.323b78f7f038578fa7b9b8d73debf237?rik=Rv5ZP8gAPK8wAA&riu=http%3a%2f%2fvignette4.wikia.nocookie.net%2flogopedia%2fimages%2ff%2ffa%2fApple_logo_black.svg%2frevision%2flatest%3fcb%3d20130524024810&ehk=z9gev%2fX8lSJ%2fGBo0HCp9PFf%2b%2bYPcpzuDuyqNb%2f%2fPefs%3d&risl=&pid=ImgRaw&r=0" alt="Apple" width="20px" height="30px"></li>
+            <li>Mac</li>
+            <li>IPhone</li>
+            <li>IPad</li>
+            <li>Watch</li>
+            <li>TV</li>
+            <li>Music</li>
+            <li>Support</li>
+            <li>
+            <a href="https://www.apple.com/in/search" target="blank"><img src="https://raw.githubusercontent.com/oCode-21/apple-clone/9fd4b3be94bfe432b9ae0355f31318df5ba0bfd9/svg/search.svg" alt="Search" width="20px" height="20px"></a></li>
+            <li><a href="https://www.apple.com/in/shop/goto/bag"><img src="https://raw.githubusercontent.com/oCode-21/apple-clone/9fd4b3be94bfe432b9ae0355f31318df5ba0bfd9/svg/shopping-bag.svg" alt="Shopping" width="20px" height="20px"></a></li>
+        </ul>
+    </header>
+
+    <div class="information">
+        <a href=""
+          >Evaluate COVID-19 symptoms and understand next steps
+          <img src="https://raw.githubusercontent.com/oCode-21/apple-clone/9fd4b3be94bfe432b9ae0355f31318df5ba0bfd9/svg/right-arrow.svg" alt="" />
+        </a>
+      </div>
+
+      <div class="information information-2">
+        <a href="">Shop online </a> and fet free, no-contact delivery, Specialist
+        help, and more.
+      </div>
+
+      <section class="section1">
+        <div
+        class="background"
+        style="background-image: url('https://github.com/oCode-21/apple-clone/blob/master/img/iPhone%2012.jpg?raw=true')"
+      ></div>
+
+         <div class="top__title">
+        <h1>iPhone 12 Pro</h1>
+        <h3>It's a leap year.</h3>
+        <div class="top__title--links">
+          <a href="https://www.apple.com/in/iphone-13-pro/" target="blank"
+            >Learn more <img src="https://raw.githubusercontent.com/oCode-21/apple-clone/9fd4b3be94bfe432b9ae0355f31318df5ba0bfd9/svg/right-arrow-blue.svg" alt=""
+           width="10px" height="10px"></a>
+          <a href="https://www.apple.com/in/shop/goto/buy_iphone/iphone_13_pro" target="blank">Shop <img src="https://raw.githubusercontent.com/oCode-21/apple-clone/9fd4b3be94bfe432b9ae0355f31318df5ba0bfd9/svg/right-arrow-blue.svg" alt=""  width="10px" height="10px"></a>
+        </div>
+      </div>
+        <div class="bottom__title">
+            <h2>iPhone 12 pro Max</h2>
+            <h2>Pre-order starting at</h2>
+            <h2>5:00 a.m.PST on 11.6</h2>
+            <h2>Available 11.13</h2>
+          </div>
+        </section>    
+
+        <section class="section2">
+            <div
+              class="background"
+              style="background-image: url('https://github.com/oCode-21/apple-clone/blob/master/img/s-2.jpg?raw=true')"
+            ></div>
+            <div class="top__title">
+                <h1 class="black">iPhone 12</h1>
+                <h3 class="black">Blast past fast</h3>
+                <div class="top__title--links">
+                  <a href="https://www.apple.com/in/iphone-13/" target="blank" class="dark-blue"
+                    >Learn more <img src="https://raw.githubusercontent.com/oCode-21/apple-clone/9fd4b3be94bfe432b9ae0355f31318df5ba0bfd9/svg/right-arrow-darkBlue.svg" alt="" width="10px" height="10px"
+                  /></a>
+                  <a href="https://www.apple.com/in/shop/goto/buy_iphone/iphone_13" target="blank" class="dark-blue"
+                    >Shop <img src="https://raw.githubusercontent.com/oCode-21/apple-clone/9fd4b3be94bfe432b9ae0355f31318df5ba0bfd9/svg/right-arrow-darkBlue.svg" alt="" width="10px" height="10px"
+                  /></a>
+                </div>
+              </div>
+              <div class="bottom__title">
+                <h2 class="black">iPhone 12 mini</h2>
+                <h2>Pre-order starting at</h2>
+                <h2>5:00 a.m.PST on 11.6</h2>
+                <h2>Available 11.13</h2>
+              </div>
+            </section>
+
+       <section class="section3">
+              <div
+                class="background"
+                style="background-image: url('https://github.com/oCode-21/apple-clone/blob/master/img/s-3.jpg?raw=true')"
+              ></div>
+              <div class="top__title">
+                <h1><img src="https://raw.githubusercontent.com/oCode-21/apple-clone/9fd4b3be94bfe432b9ae0355f31318df5ba0bfd9/svg/apple.svg" width="40px" height="40px" alt="apple" />WATCH</h1>
+                <h4>SERIES 6</h4>
+                <h3>The future of health is on your wrist.</h3>
+                <div class="top__title--links">
+                  <a href="https://www.apple.com/in/apple-watch-series-7/" target="blank"
+                    >Learn more <img src="https://raw.githubusercontent.com/oCode-21/apple-clone/9fd4b3be94bfe432b9ae0355f31318df5ba0bfd9/svg/right-arrow-blue.svg" alt=""
+                  width="10px" height="10px"></a>
+                  <a href="https://www.apple.com/in/shop/goto/buy_watch/apple_watch_series_7" target="blank">Buy <img src="https://raw.githubusercontent.com/oCode-21/apple-clone/9fd4b3be94bfe432b9ae0355f31318df5ba0bfd9/svg/right-arrow-blue.svg" alt="" width="10px" height="10px"></a>
+                </div>
+              </div>
+            </section>
+
+            <section class="section4">
+              <div class="row">
+                <div class="section4__item">
+                  <div
+                    class="background"
+                    style="background-image: url('https://github.com/oCode-21/apple-clone/blob/master/img/s-4.1.jpg?raw=true')"
+                  ></div>
+
+                  <div class="top__title">
+                    <h1 class="black">iPad Air</h1>
+                    <h3 class="black">Powerful. Colorful. Wonderful.</h3>
+                    <div class="top__title--links">
+                      <a href="https://www.apple.com/in/ipad-air/" target="blank" class="dark-blue"
+                        >Learn more <img src="https://raw.githubusercontent.com/oCode-21/apple-clone/9fd4b3be94bfe432b9ae0355f31318df5ba0bfd9/svg/right-arrow-darkBlue.svg" alt=""
+                      width="10px" height="10px"></a>
+                      <a href="https://www.apple.com/in/shop/goto/buy_ipad/ipad_air" target="blank" class="dark-blue"
+                        >Buy <img src="https://raw.githubusercontent.com/oCode-21/apple-clone/9fd4b3be94bfe432b9ae0355f31318df5ba0bfd9/svg/right-arrow-darkBlue.svg" alt=""
+                      width="10px" height="10px"></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="section4__item">
+                  <div
+                    class="background"
+                    style="background-image: url('https://github.com/oCode-21/apple-clone/blob/master/img/s-4.2.jpg?raw=true')"
+                  ></div>
+                  <div class="top__title">
+                    <div class="homePod">
+                      <h1 class="black">HomePod mini</h1>
+                      <div class="top__title--links">
+                        <a href="https://www.apple.com/in/homepod-mini/" target="blank" class="dark-blue"
+                          >Learn more <img src="https://raw.githubusercontent.com/oCode-21/apple-clone/9fd4b3be94bfe432b9ae0355f31318df5ba0bfd9/svg/right-arrow-darkBlue.svg" alt="" width="10px" height="10px"
+                        ></a>
+                        <a href="https://www.apple.com/in/shop/goto/buy_homepod/homepod_mini" target="blank" class="dark-blue"
+                          >Buy
+                          <img src="https://raw.githubusercontent.com/oCode-21/apple-clone/9fd4b3be94bfe432b9ae0355f31318df5ba0bfd9/svg/right-arrow-darkBlue.svg" alt="" width="10px" height="10px"
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="section4__item">
+                  <div
+                    class="background one"
+                    style="background-image: url('https://github.com/oCode-21/apple-clone/blob/master/img/s-4.3.jpg?raw=true')"
+                  ></div>
+
+                  <div class="top__title">
+                    <h1 class="black">
+                      <img src="https://raw.githubusercontent.com/oCode-21/apple-clone/9fd4b3be94bfe432b9ae0355f31318df5ba0bfd9/svg/apple%20_black.svg" alt="apple" width="40px" height="40px">One
+                    </h1>
+                    <h3 class="black">
+                      Bundle up to six Apple services. And enjoy more for less.
+                    </h3>
+                    <div class="top__title--links">
+                      <a href="https://www.apple.com/in/apple-one/" target="blank" class="dark-blue"
+                        >Learn more <img src="https://raw.githubusercontent.com/oCode-21/apple-clone/9fd4b3be94bfe432b9ae0355f31318df5ba0bfd9/svg/right-arrow-darkBlue.svg" alt="" width="10px" height="10px"
+                      ></a>
+                      <a href="https://one.apple.com/in?itscg=10000&itsct=one-NA-local_nv-lp-apl-avl-102020" target="blank" class="dark-blue"
+                        >Try it free <img src="https://raw.githubusercontent.com/oCode-21/apple-clone/9fd4b3be94bfe432b9ae0355f31318df5ba0bfd9/svg/diagonal-arrow.svg" alt="" width="10px" height="10px"
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="section4__item">
+                  <div
+                    class="background"
+                    style="background-image: url('https://github.com/oCode-21/apple-clone/blob/master/img/s-4.4.jpg?raw=true')"
+                  ></div>
+
+                  <div class="top__title">
+                    <h4>Coming late 2020</h4>
+                    <h1 class="black">
+                      <img src="https://raw.githubusercontent.com/oCode-21/apple-clone/9fd4b3be94bfe432b9ae0355f31318df5ba0bfd9/svg/apple%20_black.svg" alt="apple" width="40px" height="40px">Fitness+
+                    </h1>
+                    <h3 class="black">
+                      A new fitness experience powered by Apple Watch
+                    </h3>
+                    <div class="top__title--links">
+                      <a href="https://www.apple.com/in/shop/iphone/accessories/health-fitness" target="blank" class="dark-blue"
+                        >Learn more <img src="https://raw.githubusercontent.com/oCode-21/apple-clone/9fd4b3be94bfe432b9ae0355f31318df5ba0bfd9/svg/right-arrow-darkBlue.svg" alt=""
+                      width="10px" height="10px"></a>
+                      <a href="https://www.apple.com/in/shop/iphone/accessories/health-fitness" target="blank" class="dark-blue"
+                        >Shop <img src="https://raw.githubusercontent.com/oCode-21/apple-clone/9fd4b3be94bfe432b9ae0355f31318df5ba0bfd9/svg/right-arrow-darkBlue.svg" alt=""
+                      width="10px" height="10px"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="section4__item">
+                  <div
+                    class="background"
+                    style="background-image: url('https://github.com/oCode-21/apple-clone/blob/master/img/s-4.5.jpg?raw=true')"
+                  ></div>
+
+                  <div class="top__title">
+                    <h1 class="black">
+                      Card
+                    </h1>
+                    <h3 class="black">
+                      Get 3% Daily Cash back on purchases from Apple when you use Apple
+                      Card.
+                    </h3>
+                    <div class="top__title--links">
+                      <a href="https://www.apple.com/in/shop/help/payments/card_payment" target="blank" class="dark-blue"
+                        >Learn more <img src="https://raw.githubusercontent.com/oCode-21/apple-clone/9fd4b3be94bfe432b9ae0355f31318df5ba0bfd9/svg/right-arrow-darkBlue.svg" alt=""
+                        width="10px" height="10px"></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="section4__item">
+                  <div
+                    class="background"
+                    style="background-image: url('https://github.com/oCode-21/apple-clone/blob/master/img/s-4.6.jpg?raw=true')"
+                  ></div>
+                  <div class="top__title">
+                    <h1 class="black">Tv+</h1>
+                    <div class="subTitle">
+                      <h3 class="black">
+                        Streaming free exclusively through November 1.
+                      </h3>
+                      <a href="https://en.wikipedia.org/wiki/It%27s_the_Great_Pumpkin,_Charlie_Brown" target="blank">Watch now <img src="https://raw.githubusercontent.com/oCode-21/apple-clone/9fd4b3be94bfe432b9ae0355f31318df5ba0bfd9/svg/play.svg" alt="" width="40px" height="40px"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+        
+</body>
+</html>
